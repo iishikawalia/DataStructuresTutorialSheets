@@ -5,14 +5,6 @@ int array[] = {2, 3, 4, 5, 7, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 2, 4, 3, 
 
 int pos = 0;
 int size = sizeof(array) / sizeof(array[0]);
-void Delete(int pos)
-{
-    for (int k = pos; k < size - 1; k++)
-    {
-        array[k] = array[k + 1];
-    }
-    size--;
-};
 
 void DeleteDuplicateElements()
 {
@@ -47,4 +39,5 @@ int main()
     display();
     DeleteDuplicateElements();
     display();
+
 }
