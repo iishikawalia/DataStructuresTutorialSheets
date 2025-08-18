@@ -2,8 +2,6 @@
 using namespace std;
 
 int array[] = {2, 3, 4, 5, 7, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 2, 4, 3, 5, 7, 8, 9, 8, 8};
-
-int pos = 0;
 int size = sizeof(array) / sizeof(array[0]);
 
 void DeleteDuplicateElements()
@@ -20,6 +18,7 @@ void DeleteDuplicateElements()
         }
     }
 };
+
 void display()
 {
     cout << "[";
@@ -32,7 +31,8 @@ void display()
         }
     }
     cout << "]" << endl;
-}
+};
+
 int main()
 {
     cout << "Original Array: " << endl;
@@ -41,3 +41,4 @@ int main()
     display();
 
 }
+
