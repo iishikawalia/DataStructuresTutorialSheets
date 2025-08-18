@@ -22,10 +22,10 @@ void DeleteDuplicateElements()
 void display()
 {
     cout << "[";
-    for (int l = 0; l < size; l++)
+    for (int i = 0; i < size; i++)
     {
-        cout << array[l];
-        if (l < size - 1)
+        cout << array[i];
+        if (i < size - 1)
         {
             cout << ", ";
         }
@@ -41,4 +41,5 @@ int main()
     display();
 
 }
+
 
