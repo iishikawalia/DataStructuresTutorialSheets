@@ -1,14 +1,15 @@
 #include <iostream>
 #include <string>
-#include<bits/stdc++.h>
+#include <algorithm>
 using namespace std;
 
-int main(){
-    string s;
-    cout<<"Enter a string: "<<endl;
-    getline(cin, s);
-    cout<<"String in Alphabetic order: "<<endl;
-    sort(s.begin(),s.end());
-    cout<<s;
+int main()
+{
+    string str;
+    cout << "Enter a string: " << endl;
+    getline(cin, str);
+    cout << "String in Alphabetic order: " << endl;
+    sort(str.begin(), str.end());
+    cout << str;
     return 0;
 }

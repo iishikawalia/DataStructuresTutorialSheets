@@ -1,9 +1,13 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
 {
-    
-    return 0;
+    char c;
+    cout<<"Enter the character to be converted into lower case: "<<endl;
+    cin>>c;
+    char cl;
+    cout << c << " in lowercase is represented as: ";
+    cl = tolower(c);
+    cout << cl;
 }

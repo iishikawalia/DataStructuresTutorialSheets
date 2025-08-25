@@ -2,23 +2,30 @@
 #include <cstring>
 using namespace std;
 
-bool isVowel(char ch) {
+bool isVowel(char ch)
+{
     ch = tolower(ch);
-    return (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u');
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
 }
 
-int main() {
-    char str[100], result[100];
+int main()
+{
+    char str[100], strWithoutVowels[100];
+
     cout << "Enter a string: ";
     cin.getline(str, 100);
 
     int j = 0;
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!isVowel(str[i])) {
-            result[j++] = str[i];
+    int len = strlen(str);
+    for (int i = 0; i < len; i++)
+    {
+        if (!isVowel(str[i]))
+        {
+            strWithoutVowels[j] = str[i];
+            j++;
         }
     }
-    result[j] = '\0';
-    cout << "String without vowels: " << result << endl;
+    strWithoutVowels[j] = '\0';
+    cout <<endl<<"String without vowels: " << strWithoutVowels << endl;
     return 0;
 }
