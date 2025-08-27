@@ -1,37 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int linearSearch(int arr[], int n, int key) {
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == key) {
-            return i; //if found
-        }
+
+int findMissingLinear(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        if (arr[i] != i+1)
+            return i+1;
     }
-    return -1; //if not found
+    return n;
 }
+
 
 int main() {
-    int n, key;
-
-    cout << "Enter number of elements: ";
-    cin >> n;
-
-    int arr[100]; 
-    cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    cout << "Enter element to search: ";
-    cin >> key;
-
-    int result = linearSearch(arr, n, key);
-
-    if (result != -1) {
-        cout << "Element found at index " << result << endl;
-    } else {
-        cout << "Element not found" << endl;
-    }
-
+    int arr[] = {1, 2, 3, 5, 6};
+    int n = 6;  // Range is 1 to n
+    cout << "Missing Number (using Linear time): " << findMissingLinear(arr, n);
     return 0;
 }
+
